@@ -20,8 +20,3 @@ variable "public_key_path" {
   description = "Path to public key for ssh access"
   default     = "~/.ssh/id_rsa.pub"
 }
-
-variable "node_groups" {
-  description = "Number of nodes groups to create in the cluster"
-  default     = 3
-}
