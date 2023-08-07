@@ -28,6 +28,12 @@ resource "aws_elasticache_subnet_group" "default" {
   name       = "my-elasticache-subnet-group"
   subnet_ids = ["subnet-040e75a6dbdbe0c2e", "subnet-012b07d11ce5a65db"]  # Replace with the actual subnet IDs in your VPC
 }
+resource "aws_elasticache_parameter_group" "example" {
+  name   = "example-redis-parameter-group"
+  family = "redis3.2"
+  description = "Example Redis Parameter Group"
+  # Add any parameter settings if necessary
+}
 
 resource "aws_elasticache_replication_group" "example" {
   automatic_failover_enabled  = true
