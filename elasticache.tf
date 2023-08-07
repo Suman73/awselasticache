@@ -1,7 +1,9 @@
 provider "aws" {
   version = ">= 3.0.0"
+  region  = "ap-south-1"  # Replace this with your desired AWS region
   # Add any other necessary provider configurations here
 }
+
 
 resource "aws_security_group" "default" {
   name_prefix = "${var.namespace}"
