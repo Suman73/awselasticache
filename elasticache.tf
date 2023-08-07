@@ -31,7 +31,7 @@ resource "aws_elasticache_subnet_group" "default" {
 
 resource "aws_elasticache_replication_group" "default" {
   replication_group_id          = var.cluster_id
-  replication_group_description = "My Redis Cluster Replication Group"  # Add a meaningful description here
+  replication_group_description = "1st replication group for suman"  # Add a meaningful description here
   node_type                     = "cache.t2.micro"
   port                          = 6379
   parameter_group_name          = "default.redis3.2.cluster.on"
