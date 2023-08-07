@@ -42,7 +42,7 @@ resource "aws_elasticache_replication_group" "example" {
   description                 = "example description"
   node_type                   = "cache.t2.micro"
   num_cache_clusters          = 2
-  parameter_group_name        = "default.redis3.2"
+  parameter_group_name        = "default.redis7"
   port                        = 6379
 }
 
