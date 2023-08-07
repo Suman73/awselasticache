@@ -31,6 +31,7 @@ resource "aws_elasticache_subnet_group" "default" {
 
 resource "aws_elasticache_replication_group" "default" {
   replication_group_id          = var.cluster_id
+  replication_group_description = "My Redis Cluster Replication Group"  # Add a meaningful description here
   node_type                     = "cache.t2.micro"
   port                          = 6379
   parameter_group_name          = "default.redis3.2.cluster.on"
@@ -38,5 +39,5 @@ resource "aws_elasticache_replication_group" "default" {
   snapshot_window               = "00:00-05:00"
   subnet_group_name             = aws_elasticache_subnet_group.default.name
   automatic_failover_enabled    = true
-
 }
+
