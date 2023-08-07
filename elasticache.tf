@@ -1,3 +1,8 @@
+provider "aws" {
+  version = ">= 3.0.0"
+  # Add any other necessary provider configurations here
+}
+
 resource "aws_security_group" "default" {
   name_prefix = "${var.namespace}"
   vpc_id      = "${aws_vpc.default.id}"
