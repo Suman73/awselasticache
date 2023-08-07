@@ -30,7 +30,7 @@ resource "aws_elasticache_subnet_group" "default" {
 }
 resource "aws_elasticache_parameter_group" "example" {
   name   = "example-redis-parameter-group"
-  family = "redis3.2"
+  family = "redis7"
   description = "Example Redis Parameter Group"
   # Add any parameter settings if necessary
 }
